@@ -1,0 +1,159 @@
+{
+  "info": {
+    "_postman_id": "b59bf108-4894-48b2-8fb6-7f4b4803404f",
+    "name": "School-Management-API",
+    "description": "# School Management API\n\nThe **School Management API** is a RESTful backend service designed to manageoperations of a school ecosystem. It provides endpoints for registering schools, and listing schools.\n\n## Base URL\n\nAll endpoints are relative to the base URL configured via the `{{baseURL}}` collection variable (e.g., `http://localhost:3000`).\n\n## API Modules\n\n### 🏫 Schools\n\nRegister and manage school entities within the system.\n\n| Method | Endpoint | Description |\n| --- | --- | --- |\n| `POST` | `/api/v1/addSchool/` | Register a new school |\n\n## Getting Started\n\n1. Set the `{{baseURL}}` collection variable to your server's base URL (e.g., `http://localhost:3000`).\n    \n2. Use the **Add School** endpoint to register a school\n    \n3. Use the List School Endpoint with providing query of latitute and longitude to list schools with proximity",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49026217",
+    "_collection_link": "https://go.postman.co/collection/49026217-b59bf108-4894-48b2-8fb6-7f4b4803404f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Add School",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Bright Future Academy\",\r\n  \"address\": \"Pimpri, Pune\",\r\n  \"latitude\": 18.6298,\r\n  \"longitude\": 73.7997\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/v1/addSchool/",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "addSchool",
+            ""
+          ]
+        },
+        "description": "Adds School in database with provided data.  \nValidates each field before adding"
+      },
+      "response": [
+        {
+          "name": "Add School",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Bright Future Academy\",\r\n  \"address\": \"Pimpri, Pune\",\r\n  \"latitude\": 18.6298,\r\n  \"longitude\": 73.7997\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/v1/addSchool/",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "addSchool",
+                ""
+              ]
+            }
+          },
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "description": "",
+              "type": "text"
+            }
+          ],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": "{\n    \"success\": true,\n    \"message\": \"School added successfully\",\n    \"data\": [\n        {\n            \"fieldCount\": 0,\n            \"affectedRows\": 1,\n            \"insertId\": 6,\n            \"info\": \"\",\n            \"serverStatus\": 2,\n            \"warningStatus\": 0,\n            \"changedRows\": 0\n        },\n        null\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "List School",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/api/v1/listSchools?latitude=18.5679&longitude=73.9143",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "listSchools"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "18.5679"
+            },
+            {
+              "key": "longitude",
+              "value": "73.9143"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL",
+      "value": ""
+    }
+  ]
+}
