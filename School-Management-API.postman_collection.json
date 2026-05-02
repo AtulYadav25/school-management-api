@@ -153,7 +153,7 @@
   "variable": [
     {
       "key": "baseURL",
-      "value": ""
+      "value": "https://school-management-api1.vercel.app"
     }
   ]
 }
