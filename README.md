@@ -4,27 +4,6 @@ A lightweight RESTful backend API for registering and listing schools, built wit
 
 ---
 
-## 📚 Table of Contents
-
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Environment Variables](#environment-variables)
-  - [Database Setup](#database-setup)
-  - [Running the Server](#running-the-server)
-- [API Reference](#api-reference)
-  - [Add School](#1-add-school)
-  - [List Schools](#2-list-schools)
-- [Request & Response Examples](#request--response-examples)
-- [Postman Collection](#postman-collection)
-- [Validation](#validation)
-- [Error Handling](#error-handling)
-
----
-
 ## ✨ Features
 
 - **Add School** — Register a new school with name, address, latitude, and longitude.
